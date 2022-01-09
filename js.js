@@ -107,15 +107,15 @@ function didIWin(results){
     let scoreCheck = 0;
     scoreCheck = results;
     if (results > 2.5){
-        console.log("You win the match! Final score is: " + scoreCheck+ "/10. Congratulations!");
+        console.log("You win the match! Final score is: " + scoreCheck+ "/5. Congratulations!");
     }
 
     else if (results == 2.5){
-        console.log("You tie the match! Final score is: " + scoreCheck+ "/10. Formidable opponent!");
+        console.log("You tie the match! Final score is: " + scoreCheck+ "/5. Formidable opponent!");
     }
 
     else {
-        console.log("You lose! Final score is: " + scoreCheck+ "/10. Dirty, sad, ugly loser!");
+        console.log("You lose! Final score is: " + scoreCheck+ "/5. Dirty, sad, ugly loser!");
     }
 }
 
