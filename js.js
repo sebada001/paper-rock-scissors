@@ -1,6 +1,6 @@
 let scoreKeeper = 0;
 
-window.prompt("Welcome to Rock, Paper, Scissor. Open your dev tools console to see the game results.")
+window.alert("Welcome to Rock, Paper, Scissor. Open your dev tools console and re-load the website to see the game results.");
 
 function randomChoice(min, max) {
     return Math.floor(Math.random() * (max - min) + min);
