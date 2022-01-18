@@ -62,27 +62,27 @@ scissors.addEventListener("click", () => {
 function checkDifference(playa, peezee){
     console.log(playa-peezee);
     if (playa == peezee){
-        gon.src= "/img/gon_neutral.jpg";
-        player.src= "/img/player_play.jpg";
+        gon.src= "img/gon_neutral.jpg";
+        player.src= "img/player_play.jpg";
         
     }
     else if ((playa - peezee) === 1){
-        gon.src= "/img/gon_lost.jpg";
-        player.src= "/img/player_winning.jpg";
+        gon.src= "img/gon_lost.jpg";
+        player.src= "img/player_winning.jpg";
     }
     else if ((playa - peezee) == 2){
-        gon.src= "/img/gon_lost_2.jpg";
-        player.src= "/img/player_win.jpg";
+        gon.src= "img/gon_lost_2.jpg";
+        player.src= "img/player_win.jpg";
     }
 
     else if ((peezee - playa) == 1){
-        gon.src= "/img/gon_happy.png";
-        player.src= "/img/player_worry.jpg";
+        gon.src= "img/gon_happy.png";
+        player.src= "img/player_worry.jpg";
     }
 
     else if ((peezee - playa) == 2){
-        gon.src= "/img/gon_happy_1.png"
-        player.src= "/img/player_lose.jpg";
+        gon.src= "img/gon_happy_1.png"
+        player.src= "img/player_lose.jpg";
     }
 
 
@@ -138,11 +138,11 @@ function youWin(){
 }
 
 function endGame(){
-    window.location.href = "/doom.html";
+    window.location.href = "doom.html";
 }
 
 function lostGame(){
-    window.location.href = "/lose.html";
+    window.location.href = "lose.html";
 }
 
 function checkScorePc(pc){
