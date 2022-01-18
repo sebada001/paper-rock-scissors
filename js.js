@@ -107,6 +107,10 @@ function checkScorePl(pl){
         document.documentElement.style.setProperty('--color-candle', 'rgb(236, 96, 14)');
         candleThree.style.webkitAnimationPlayState = "running";
         //ends
+        
+        rock.style.display = "none";
+        paper.style.display = "none";
+        scissors.style.display = "none";
         setTimeout(youWin, 600);
         setTimeout(endGame, 3000);
     }
@@ -120,15 +124,25 @@ function checkScorePl(pl){
 function youLose(){
     pickPlayer.innerHTML = "YOU LOSE";
     pickPc.innerHTML = "YOU LOSE";
+    pickPlayer.style.display = "none";
+    pickPc.style.marginLeft = "-65px";
+    pickPc.style.marginTop = "135px";
 }
 
 function youWin(){
     pickPlayer.innerHTML = "YOU WIN";
     pickPc.innerHTML = "YOU WIN";
+    pickPc.style.display = "none";
+    pickPlayer.style.marginLeft = "10px";
+    pickPlayer.style.marginTop = "135px";
 }
 
 function endGame(){
     window.location.href = "/doom.html";
+}
+
+function lostGame(){
+    window.location.href = "/lose.html";
 }
 
 function checkScorePc(pc){
@@ -145,7 +159,12 @@ function checkScorePc(pc){
         document.documentElement.style.setProperty('--color-candle', 'greenyellow');
         candleThree.style.webkitAnimationPlayState = "running";
         //ends
+        
+        rock.style.display = "none";
+        paper.style.display = "none";
+        scissors.style.display = "none";
         setTimeout(youLose, 600);
+        setTimeout(lostGame, 3000);
     }
 
     else{
