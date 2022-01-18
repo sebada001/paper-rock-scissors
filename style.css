@@ -1,0 +1,437 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Dongle:wght@700&display=swap');
+
+:root{
+    --color-candle: rgb(236, 96, 14);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Dongle', sans-serif;
+}
+
+.doom-all{
+    background-image: url(/img/gon_lost_3.jpg);
+    background-color: rgba(73, 11, 11, 0.548);
+    animation: flasherin 1.3s cubic-bezier(0.175, 0.666, 0.32, 1.275) both;
+    animation-iteration-count: infinite;
+}
+
+.aniOne{
+    animation: ani1 forwards;
+    animation-duration: 1s;
+    font-size: 50px;
+}
+
+.fir{
+    margin-top: 30px;
+    animation-delay: .5s;
+}
+
+.sec{
+    animation-delay: .8s;
+}
+
+.thi{
+    animation-delay: 1.1s;
+}
+
+.fou{
+    animation-delay: 1.4s;
+}
+
+.fif{
+    animation-delay: 1.7s;
+    margin-top: -20px;
+}
+
+.six{
+    animation-delay: 2s;
+    margin-top: -30px;
+    
+}
+
+.sev{
+    animation-delay: 2.3s;
+    padding-top: 50px;
+}
+
+.eig{
+    animation-delay: 2.7s;
+}
+
+.nin{
+    animation-delay: 3.1s;
+}
+
+.ten{
+    animation-delay: 3.4s;
+}
+
+.ele{
+    animation-delay: 3.7s;
+}
+
+
+
+@keyframes flasherin {
+    0%{
+        background-blend-mode: none;
+    }
+    50%{
+        background-blend-mode: multiply;
+    }
+    100%{
+        background-blend-mode:luminosity;
+    }
+}
+
+
+
+
+
+body{
+    background-color: rgb(28, 121, 28);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+}
+
+h1{
+    color: white;
+    font-size: 80px;
+    padding: 30px;
+    opacity: 0;
+    animation: ani1 1.6s ease-out forwards;
+    margin-top: 0px;
+}
+
+@keyframes ani1{
+    100%{
+        opacity: 1;
+    }
+}
+
+p{
+    color: white;
+    font-size: 30px;
+    opacity: 0;
+    animation: ani1 1.2s 1.9s ease-out forwards;
+    font-family: 'Dongle', sans-serif;
+    font-size: 40px;
+}
+
+.title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title > img{
+    border:greenyellow 5px solid;
+    border-radius: 5px;
+    box-shadow: black 0px 0px 40px;
+}
+
+.play-opt-in > p {
+    padding: 30px;
+}
+
+button{
+    scale: 1;
+    padding: 0px 20px;
+    font-size: 20px;
+    background-color: rgb(39, 56, 56);
+    color: lightsteelblue;
+    border-radius: 10px;
+    border: greenyellow 2px solid;
+    animation: descaler 0.1s ease-in;
+    z-index: 3;
+    font-weight: 700;
+    font-size: 32px;
+    
+}
+
+ .invisibler{
+    background-color:rgb(28, 121, 28);
+    height: 110px;
+    width: 300px;
+    position: absolute;
+    margin-top: 640px;
+    opacity: 1;
+    animation: fader 1.6s 3.1s ease-out forwards;
+    display:block;
+} 
+
+@keyframes fader{
+    0%{
+        opacity: 1;
+    }
+
+    90%{
+        opacity: 0;
+    }
+    
+    100%{
+        opacity: 0;
+        display: none;
+        margin-left: 500px;
+    }
+}
+
+
+
+button:hover{
+
+    animation: scaler 0.2s ease-out forwards;
+    
+}
+
+
+@keyframes scaler{
+    0%{
+        scale: 1;
+    }
+    100%{
+        scale: 1.4;
+    }
+}
+
+@keyframes descaler{
+    0%{
+        scale: 1.4;
+    }
+    100%{
+        scale: 1;
+    }
+}
+
+
+.play-opt-in{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.choices > a{
+    margin: 0 20px;
+}
+
+/*//////////////////////////////////////// CSS FOR BATTLE AREA PAGE ////////////////////////////////////////*/
+
+.battle-body{
+    background-image: url(/img/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    background-blend-mode: darken;
+}
+
+.titles{
+    height: 140px;
+    position: ;
+}
+
+.titles > h1{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.pick-player{
+    align-self:flex-end;
+    position: absolute;
+    margin-left: -200px;
+    width: 300px;
+    padding: 0px;
+    z-index: 300;
+    color: rgb(236, 96, 14);
+}
+
+.pick-pc{
+    display: flex;
+    justify-content: right;
+    position: absolute;
+    margin-left: 120px;
+    width: 300px;
+    padding: 0px;
+    z-index: 300;
+    color: greenyellow;
+}
+
+.gon-name{
+    position: absolute;
+    color: white;
+    right: 340px;
+    top: 200px;
+    font-size: 40px;
+    opacity: 0;
+    animation: ani1 1.6s ease-out forwards;
+}
+
+.player-name{
+    position: absolute;
+    color: white;
+    left: 310px;
+    top: 200px;
+    font-size: 40px;
+    opacity: 0;
+    animation: ani1 1.6s ease-out forwards;
+}
+
+.battle-screen{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    position: relative;
+    width: 100%;
+    opacity: 0;
+    animation: ani1 1.6s ease-out forwards;
+
+}
+
+.playground{
+    width: 700px;
+    height: 400px;
+    margin: 80px 80px;
+    margin-top: 50px;
+    border: 4px greenyellow solid;
+    box-shadow: black 0 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8em;
+    background-image:
+    linear-gradient(rgba(56, 68, 73, 0.952), rgb(148, 153, 132)),
+    url(/img/greedisland.jpg);
+    background-size:cover;
+    background-blend-mode:multiply;
+    border-radius: 10px;
+
+}
+
+
+
+.playground > div{
+    height: 80px;
+    width: 80px;
+    border: wheat 2px solid;
+    padding: 13px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: lightsteelblue;
+    animation: choiceOut 0.4s ease-out forwards;
+}
+
+.playground > div > img{
+    height: 50px;
+    width: 50px;
+}
+
+.playground > div:hover{
+    animation: choice 0.2s ease-out forwards;
+}
+@keyframes choice {
+    100%{
+        background-color:rgb(28, 121, 28);
+    }
+    
+}
+
+@keyframes choiceOut{
+    0%{
+        background-color:rgb(28, 121, 28);
+    }
+    100%{
+        background-color: lightsteelblue;
+    }
+}
+
+.player{
+    object-fit: cover;
+    
+}
+
+.gon{
+    object-fit: cover;
+    bottom: 10px;
+
+
+}
+
+.cont{
+    height: 300px;
+    width: 300px;
+    border: lightsteelblue 4px solid;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    
+}
+
+.candles{
+    position: relative;
+    left: -50px;
+}
+
+
+.candle{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    background-color: none;
+    animation: candleLight 2s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+    animation-play-state: paused;
+    border-radius: 30%;
+}
+
+
+@keyframes candleLight {
+    0%{
+        background-color: none;
+    }
+
+    5%{
+        background-color: rgba(231, 17, 60, 0.966);
+    }
+    10%{
+        background-color: rgb(176, 231, 46);
+    }
+    25%{
+        background-color: rgb(241, 200, 14);
+    }
+    50%{
+        background-color: rgb(236, 233, 34);
+    }
+    100%{
+        background-color: var(--color-candle);
+    }
+
+    
+}
+
+
+.one{
+    left: -300px;
+}
+
+.two{
+    left: -150px;
+}
+
+.three{
+    left: 0px;
+}
+
+.four{
+    left: 150px;
+}
+.five{
+    left: 300px;
+}
+
