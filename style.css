@@ -12,7 +12,7 @@
 }
 
 .doom-all{
-    background-image: url(/img/gon_lost_3.jpg);
+    background-image: url(img/gon_lost_3.jpg);
     background-color: rgba(73, 11, 11, 0.548);
     animation: flasherin 1.3s cubic-bezier(0.175, 0.666, 0.32, 1.275) both;
     animation-iteration-count: infinite;
